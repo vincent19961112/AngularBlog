@@ -62,9 +62,8 @@ export class PostsService {
 
   //新增標籤名
   addTag(Tags){
-    let InputTags = Tags.tags;
+    let InputTags = Tags;
     this.Afs.collection('Tags').doc('category').get().subscribe(data=>{
-      console.log(data.exists);
       if(!data.exists){
           this.Afs.collection('Tags').doc('category').set({tags:InputTags});
       }else{

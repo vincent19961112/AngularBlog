@@ -39,7 +39,9 @@ export class PostDialogComponent implements OnInit {
   }
   sendPost(){
     if(this.data.newPost){
+      console.log(this.data.tags)
       this.PostApi.addPost(this.data);
+      this.PostApi.addTag(this.data.tags);
       this.success = true;
       setTimeout(() => {
           this.dialogRef.close();

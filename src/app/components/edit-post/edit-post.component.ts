@@ -71,9 +71,7 @@ export class EditPostComponent implements OnInit,OnDestroy {
     this.postId = this.router.snapshot.paramMap.get('id');
     console.log(this.postId)
     this.postApiSubscription = this.postApi.getPrivatePost(this.postId).subscribe((data:any)=>{
-      console.log(data)
       this.title = data.title
-      console.log(data.tags);
       data.tags.forEach(tag=>{
         this.Tags.push({name:tag})
       })
@@ -91,7 +89,6 @@ export class EditPostComponent implements OnInit,OnDestroy {
   }
 
   openDialog(): void {
-     console.log(this.updatedAt)
      this.EditContent = this.EditForm.get('editor').value;
      let category = [];
      this.Tags.map(tag=>{
