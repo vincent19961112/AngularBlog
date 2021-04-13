@@ -1,0 +1,53 @@
+@import "~@angular/material/theming";
+
+@include mat-core();
+$custom-typography: mat-typography-config(
+  $font-family: "Noto Sans TC, sans-serif,'Noto Sans TC', sans-serif",
+  $display-4: mat-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $display-3: mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(48px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat-typography-level(40px, 54px, 400),
+  $headline: mat-typography-level(20px, 30px, 400),
+  $title: mat-typography-level(20px, 35px, 500),
+  $subheading-2: mat-typography-level(20px, 28px, 400),
+  $subheading-1: mat-typography-level(20px, 24px, 400),
+  $body-2: mat-typography-level(14px, 24px, 500),
+  $body-1: mat-typography-level(14px, 20px, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  $input: mat-typography-level(inherit, 1.125, 400),
+);
+
+@include angular-material-typography($custom-typography);
+
+//版型樣式顏色(一)
+$customer-primary: mat-palette($mat-light-blue, 500);
+
+$customer-accent: mat-palette($mat-cyan, 500);
+
+$customer-warn: mat-palette($mat-teal, 500);
+
+$custom-theme: mat-light-theme(
+  $customer-primary,
+  $customer-accent,
+  $customer-warn
+);
+.custom-theme-1 {
+  @include angular-material-theme($custom-theme);
+}
+
+//版型樣式顏色(二)
+$customer-primary-2: mat-palette($mat-grey, 900);
+
+$customer-accent-2: mat-palette($mat-deep-orange, 500);
+
+$customer-warn-2: mat-palette($mat-brown, 900);
+
+$custom-theme-2: mat-dark-theme(
+  $customer-primary-2,
+  $customer-accent-2,
+  $customer-warn-2
+);
+.custom-theme-2 {
+  @include angular-material-theme($custom-theme-2);
+}

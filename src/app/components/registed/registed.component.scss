@@ -1,0 +1,26 @@
+section {
+  padding: 25px;
+  min-height: 85vh;
+  mat-card {
+    width: 600px;
+    height: 500px;
+    mat-card-content {
+      width: 100%;
+      mat-form-field {
+        width: 100%;
+      }
+      button {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+    mat-card-actions {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

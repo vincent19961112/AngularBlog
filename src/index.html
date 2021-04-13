@@ -6,8 +6,25 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+<!-- 引入highlight.js的程式碼js與樣式css -->
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/monokai-sublime.min.css">
+ <!-- 引入highlight.js的程式碼js -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+  <script>
+    hljs.configure({
+      languages: ['javascript', 'Typescript', 'java','c++','c#','php','sql','html','scss','css']  //這些程式碼會被上色
+    });
+  </script>
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+
+<!-- <script src="/__/firebase/8.2.2/firebase-app.js"></script>
+<script src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+<script src="/__/firebase/init.js"></script> -->
 </body>
 </html>

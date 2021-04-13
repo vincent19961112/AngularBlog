@@ -1,0 +1,57 @@
+<div class="Clock">
+<!-- second Spinner -->
+  <div class="Spinner-TS">
+    <mat-progress-spinner
+      [color]="colorS"
+      [mode]="mode"
+      [value]='TSSpinner'
+      [diameter]='TSdiameter'
+      [strokeWidth]='TSstrokeWidth'>
+    </mat-progress-spinner>
+    <div class="TS" fxLayout="row" fxLayoutAlign="center center">
+      <div class="bg-sh">{{TTS}}</div>
+      <div class="bg-sh">{{TOS}}</div>
+       <div class="bg-sh">秒</div>
+    </div>
+  </div>
+<!-- minute Spinner -->
+  <div class="Spinner-TM">
+    <mat-progress-spinner
+      [color]="colorM"
+      [mode]="mode"
+      [value]='TMSpinner'
+      [diameter]='TMdiameter'
+      [strokeWidth]='TMstrokeWidth'>
+    </mat-progress-spinner>
+     <div class="TM" fxLayout="row" fxLayoutAlign="center center">
+       <div class="bg-sh">{{TTM}}</div>
+       <div class="bg-sh">{{TOM}}</div>
+       <div class="bg-sh">分</div>
+    </div>
+  </div>
+<!-- hour Spinner -->
+  <div class="Spinner-TH">
+    <mat-progress-spinner
+      [color]="colorH"
+      [mode]="mode"
+      [value]='THSpinner'
+      [diameter]='THdiameter'
+      [strokeWidth]='THstrokeWidth'>
+    </mat-progress-spinner>
+    <div class="TH" fxLayout="row" fxLayoutAlign="center center">
+      <div class="bg-sh">{{TTH}}</div>
+      <div class="bg-sh">{{TOH}}</div>
+       <div class="bg-sh">時</div>
+    </div>
+  </div>
+<!-- 標示顏色 -->
+ <ul class="TagColor">
+   <li fxLayout="row" fxLayoutAlign="center center"><button color="accent" mat-mini-fab ></button>:{{TTH}}{{TOH}}時</li>
+   <li fxLayout="row" fxLayoutAlign="center center"><button color="warn" mat-mini-fab ></button>:{{TTM}}{{TOM}}分</li>
+   <li fxLayout="row" fxLayoutAlign="center center"><button color="primary" mat-mini-fab ></button>:{{TTS}}{{TOS}}秒</li>
+ </ul>
+</div>
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "quill-firestore-blog"
+  },
+  "targets": {
+    "quill-firestore-blog": {
+      "hosting": {
+        "quill-example": [
+          "quill-firestore-blog"
+        ]
+      }
+    }
+  }
+}

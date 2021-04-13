@@ -1,0 +1,20 @@
+<div class="navbar">
+  <mat-toolbar class="logo" color="warn">
+    <h1>LOGO 部落格</h1>
+    <span></span>
+    <button color="warn" mat-flat-button (click)="themeChange()"><mat-icon>format_color_fill</mat-icon></button>
+      <ng-container *ngIf="isAuthenticated; else GoSignOrSignUp">
+          <button color="warn" mat-flat-button [routerLink]="['/about']"><mat-icon>account_circle</mat-icon>個人檔案</button>
+          <button color="warn" mat-flat-button (click)="SignOut()"><mat-icon>account_circle</mat-icon>登出</button>
+      </ng-container>
+      <ng-template #GoSignOrSignUp>
+          <button color="warn" mat-flat-button  [routerLink]="['/signIn']" ><mat-icon>account_circle</mat-icon>登入</button>
+      </ng-template>
+  </mat-toolbar>
+  <mat-toolbar color="primary">
+      <mat-toolbar-row fxLayoutAlign="space-around">
+          <button class="mat-h1 btn" mat-flat-button color="primary" [routerLink]="['/home']" [routerLinkActive]="['router-active']">首頁</button>
+          <button class="mat-h1 btn" mat-flat-button color="primary" [routerLink]="['/post']" [routerLinkActive]="['router-active']">文章</button>
+      </mat-toolbar-row>
+  </mat-toolbar>
+</div>

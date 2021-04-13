@@ -1,0 +1,38 @@
+<section fxLayoutAlign="center center">
+  <mat-card  fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title fxLayoutAlign="center center">註冊</mat-card-title>
+    <mat-card-content>
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" [mustMatch]="['password', 'confirmPassword']" novalidate>
+        <mat-form-field >
+          <mat-label>信箱</mat-label>
+          <input matInput type="text" name="email" [(ngModel)]="model.email" #email="ngModel"  required email/>
+            <mat-error *ngIf="f.submitted && email.invalid">
+              <mat-error *ngIf="email.errors.required">信箱未填</mat-error>
+              <mat-error *ngIf="email.errors.email">信箱必須是存在的地址</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field >
+          <mat-label>密碼</mat-label>
+          <input matInput type="password" name="password" [(ngModel)]="model.password" #password="ngModel"  required minlength="6" />
+            <mat-error *ngIf="f.submitted && password.invalid">
+              <mat-error *ngIf="password.errors.required">密碼必填</mat-error>
+              <mat-error *ngIf="password.errors.minlength">密碼至少六個字</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field >
+          <mat-label>確認密碼</mat-label>
+          <input matInput type="password" name="confirmPassword" [(ngModel)]="model.confirmPassword" #confirmPassword="ngModel" required/>
+            <mat-error *ngIf="f.submitted && confirmPassword.invalid">
+              <mat-error *ngIf="confirmPassword.errors.required">確認密碼必填</mat-error>
+              <mat-error *ngIf="confirmPassword.errors.mustMatch">密碼不符</mat-error>
+            </mat-error>
+        </mat-form-field>
+
+        <button type="submit" color="accent"  mat-raised-button>註冊</button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</section>

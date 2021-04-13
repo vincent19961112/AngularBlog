@@ -1,0 +1,60 @@
+<mat-toolbar color="accent">
+    文章列表
+</mat-toolbar>
+
+  <div
+  class="home-content"
+  fxLayout="row"
+  fxLayoutGap
+  fxLayoutGap="50px"
+  fxLayoutAlign="space-between"
+  fxLayout.xs="column"
+  fxLayout.sm="column"
+  >
+  <app-left-list
+   fxFlex='20%'
+   fxFlexOrder
+   fxFlexOrder.xs='1'
+   fxFlexOrder.sm='1'
+   (search)="TagsSearchPosts($event)"
+   ></app-left-list>
+
+  <app-main
+   fxFlex='50%'
+   fxFlexOrder
+   fxFlexOrder.xs='3'
+   fxFlexOrder.sm='3'
+   [TagPosts$]='Posts$'
+  ></app-main>
+
+  <app-right-list
+   fxFlex='30%'
+   fxFlexOrder
+   fxFlexOrder.xs='2'
+   fxFlexOrder.sm='2'
+   ></app-right-list>
+</div>
+<div class="black">
+  <mat-spinner
+    [color]='color'
+    [value]="spinnerScroll"
+    [mode]="mode">
+  </mat-spinner>
+  <button
+  selected
+  class="scrollNumber"
+  color="accent"
+  mat-mini-fab
+        >{{spinnerScroll}}</button>
+  <button
+  class="ToTop"
+  [ngClass]="{'display': !isScrolled}"
+  (click)="goToTop()"
+  color="warn"
+  mat-mini-fab
+  ><mat-icon>expand_less</mat-icon></button>
+</div>
+
+
+
+

@@ -1,0 +1,43 @@
+.section {
+  padding: 50px;
+  min-height: 85vh;
+  mat-card {
+    margin: 15px;
+    width: 100%;
+    padding: 20px;
+    mat-card-title {
+      margin-bottom: 20px;
+    }
+    mat-card-subtitle {
+      margin-top: 20px;
+    }
+    mat-card-content {
+      .img {
+        border-radius: 100%;
+        height: 80px;
+        width: 80px;
+        background-image: url("https://digitalcrime.news/wp-content/uploads/2020/07/solo-leveling-0517.jpg");
+        background-position: right top;
+        background-size: cover;
+      }
+      width: 100%;
+      mat-form-field {
+        width: 100%;
+      }
+    }
+    mat-card-actions {
+      padding: 0;
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+mat-paginator {
+  margin: 16px;
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+<section>
+  <mat-card fxLayout="column" fxLayout.xs="row" fxLayout.sm="row" fxFlexAlign="center">
+    <h1>標題查詢</h1>
+ <mat-form-field>
+  <mat-label>輸入標題</mat-label>
+  <input matInput type="text" [(ngModel)]="SearchTitle">
+  <button mat-button *ngIf="SearchTitle" matSuffix mat-icon-button (click)="SearchTitles(SearchTitle)">
+    <mat-icon>search</mat-icon>
+  </button>
+</mat-form-field>
+</mat-card>
+<mat-card class="tags" fxLayout="column" fxLayout.xs="row" fxLayout.sm="row" fxFlexAlign="center">
+    <h1>標籤</h1>
+   <mat-chip-list aria-label="Tap">
+     <mat-chip (click)="refresh()" selected>All</mat-chip>
+    <mat-chip (click)="searchTags(tag)" fxLayout="row wrap"  *ngFor="let tag of Tags$" color="primary" selected>{{tag}}</mat-chip>
+  </mat-chip-list>
+</mat-card>
+
+</section>

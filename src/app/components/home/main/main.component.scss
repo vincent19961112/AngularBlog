@@ -1,0 +1,187 @@
+$color-box-3: #57ccfd;
+
+$color-box-6: #9b1308;
+
+section {
+  .cards--three {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      .cards--three__rect-1 {
+        left: 5%;
+
+        .shadow-1 {
+          left: -20%;
+        }
+      }
+
+      .cards--three__rect-2 {
+        left: 20%;
+
+        &:before {
+          left: -100%;
+        }
+
+        &:after {
+          left: 90%;
+        }
+
+        .shadow-2 {
+          left: -10%;
+        }
+      }
+
+      .cards--three__circle {
+        transform: scale(1);
+
+        &:before {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    &__rect-1 {
+      background: #fff;
+      width: 200px;
+      height: 110px;
+      transform: skewX(-20deg);
+      display: block;
+      position: absolute;
+      top: 73%;
+      opacity: 0.9;
+      left: -100%;
+      z-index: 8;
+      transition: all 0.5s ease-in;
+
+      p {
+        font-size: 20px;
+        color: #fff;
+        transform: skewX(20deg);
+        line-height: 6rem;
+      }
+
+      .shadow-1 {
+        background: $color-box-6;
+        width: 230px;
+        height: 100px;
+        display: block;
+        position: absolute;
+        left: -200%;
+        z-index: -1;
+        transition: all 0.3s ease-in;
+      }
+    }
+
+    &__rect-2 {
+      width: 100px;
+      height: 70px;
+      background: #fff;
+      position: absolute;
+      top: 65%;
+      left: 1000%;
+      opacity: 0.9;
+      transform: skewX(-20deg);
+      z-index: 8;
+      transition: all 0.5s ease-in;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 40px;
+        background: $color-box-3;
+        opacity: 1;
+        position: absolute;
+        left: 500%;
+        top: 10%;
+        transition: all 0.3s ease-in;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 40px;
+        background: $color-box-6;
+        opacity: 1;
+        position: absolute;
+        left: 500%;
+        top: 114%;
+        transition: all 0.5s ease-in;
+        transition-delay: 0.2s;
+      }
+
+      .shadow-2 {
+        background: $color-box-3;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: -10%;
+        left: 500%;
+        transition: all 0.5s ease-in;
+        transition-delay: 0.2s;
+      }
+    }
+
+    &__circle {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      top: -15%;
+      left: 80%;
+      opacity: 0.9;
+      transform: scale(0);
+      transition: all 0.3s ease;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $color-box-6;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.3s ease;
+        transition-delay: 0.2s;
+      }
+    }
+
+    &__list {
+      list-style: none;
+      position: absolute;
+      top: -9px;
+      right: 7px;
+      padding-top: 60px;
+      transition: all 0.4s ease;
+    }
+  }
+  .main {
+    position: relative;
+    height: 400px;
+    margin-bottom: 20px;
+    button {
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+    }
+  }
+
+  .top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+  }
+  mat-card-title {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}

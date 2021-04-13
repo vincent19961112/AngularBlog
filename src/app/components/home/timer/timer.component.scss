@@ -1,0 +1,93 @@
+$font-Size: 20px;
+
+@mixin bg-sh {
+  font-size: $font-Size;
+}
+@mixin Spinner-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Clock {
+  // overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  .TagColor {
+    overflow: hidden;
+    position: absolute;
+    transform: translate(100%, -80%);
+    font-size: $font-Size;
+    li {
+      list-style-type: none;
+      margin-top: 1.5rem;
+      button {
+        margin-right: 10px;
+        cursor: default;
+      }
+    }
+  }
+  .Spinner-TS {
+    border-radius: 100%;
+    @include Spinner-absolute;
+    .TS {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translate(110%, -50%);
+      @include bg-sh;
+    }
+  }
+  .Spinner-TM {
+    @include Spinner-absolute;
+    .TM {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translate(80%, -50%);
+      @include bg-sh;
+    }
+  }
+  .Spinner-TH {
+    @include Spinner-absolute;
+    .TH {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translate(50%, -50%);
+      @include bg-sh;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  $font-Size: 10px;
+  .Clock {
+    height: 100px;
+    width: 100px;
+    font-size: 10px;
+    height: 150px;
+    width: 150px;
+    .TagColor {
+      font-size: 10px;
+    }
+    .Spinner-TS {
+      .TS {
+        font-size: 10px;
+      }
+    }
+    .Spinner-TM {
+      .TM {
+        font-size: 10px;
+      }
+    }
+    .Spinner-TH {
+      .TH {
+        font-size: 10px;
+      }
+    }
+  }
+}

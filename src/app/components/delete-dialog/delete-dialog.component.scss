@@ -1,0 +1,16 @@
+section {
+  height: 100%;
+  width: 100%;
+}
+.success {
+  background-color: grey;
+  opacity: 0.8;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

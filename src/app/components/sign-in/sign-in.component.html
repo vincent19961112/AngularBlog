@@ -1,0 +1,32 @@
+<section fxLayoutAlign="center center">
+    <mat-card  fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-title fxLayoutAlign="center center">登入</mat-card-title>
+      <mat-card-subtitle><mat-error>{{errorMessage}}</mat-error></mat-card-subtitle>
+      <mat-card-content  fxLayout="column" fxLayoutAlign="center center">
+        <form name='form' (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+        <mat-form-field>
+          <input matInput type="text" name="email" [(ngModel)]="model.email" #email="ngModel"  required email placeholder="帳號">
+            <mat-error *ngIf="f.submitted && email.invalid">
+                  <mat-error *ngIf="email.errors.required">信箱未填</mat-error>
+                  <mat-error *ngIf="email.errors.email">信箱必須是存在的地址</mat-error>
+              </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input placeholder="密碼" matInput type="password" name="password" [(ngModel)]="model.password" #password="ngModel"  required minlength="6">
+          <mat-error *ngIf="f.submitted && password.invalid">
+              <mat-error *ngIf="password.errors.required">密碼未填</mat-error>
+              <mat-error *ngIf="password.errors.minlength">密碼至少六個字</mat-error>
+          </mat-error>
+        </mat-form-field>
+
+        <button color="accent" (click)="SignIn(model.email,model.password)" mat-raised-button>登入</button>
+        <button color="primary" [routerLink]="['/registed']" mat-raised-button>註冊</button>
+        <button color="warn" (click)="SignWithGoogle()" mat-raised-button>google登入</button>
+
+
+        </form>
+
+      </mat-card-content>
+    </mat-card>
+</section>

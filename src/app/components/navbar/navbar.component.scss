@@ -1,0 +1,39 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  .logo {
+    height: 150px;
+    span {
+      margin: auto;
+    }
+  }
+
+  button {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 960px) {
+    button {
+      font-size: 9px;
+    }
+  }
+
+  .btn {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0px;
+      left: 0;
+      bottom: 10px;
+      background: #fff;
+      transition: all 0.5s ease;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+  }
+}

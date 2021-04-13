@@ -1,0 +1,387 @@
+section {
+  mat-toolbar {
+    position: relative;
+    height: 80vh;
+    // pincel -1
+    .pincel1 {
+      z-index: 1;
+      position: absolute;
+      bottom: 40%;
+      left: 0%;
+      transform: translate(10%, -50%) rotate(110deg);
+      height: 50px;
+      width: 30vw;
+      .pincelbottom {
+        position: absolute;
+        height: 100px;
+        width: 60px;
+        top: 50%;
+        left: 0%;
+        border-color: black;
+        transform: translate(-50%, -50%);
+        background-color: rgb(205, 213, 224);
+        .pincelclean {
+          position: absolute;
+          height: 100px;
+          width: 60px;
+          top: 50%;
+          left: 0%;
+          transform: translate(-50%, -50%);
+          background-color: rgb(255, 255, 255);
+        }
+      }
+      .pincelhead {
+        position: absolute;
+        height: 50px;
+        width: 100px;
+        top: 0%;
+        right: 0%;
+        transform: translateX(60%);
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: rgb(219, 124, 8);
+        .pincelheadtop {
+          position: absolute;
+          height: 50px;
+          width: 100px;
+          top: 0%;
+          right: 0%;
+          border-color: black;
+          transform: translate(0%, -50%) skew(50deg);
+          background-color: rgb(104, 69, 25);
+          overflow: hidden;
+          .pincelheader {
+            position: absolute;
+            background-color: black;
+            height: 50px;
+            width: 50px;
+            bottom: 0%;
+            left: 100%;
+            transform: skew(-50deg);
+          }
+        }
+        .pincelheadbelow {
+          position: absolute;
+          height: 50px;
+          width: 100px;
+          top: 100%;
+          right: 0%;
+          transform: translate(0%, -50%) skew(-50deg);
+          background-color: rgb(212, 139, 43);
+          overflow: hidden;
+          .pincelheader {
+            position: absolute;
+            background-color: black;
+            height: 50px;
+            width: 50px;
+            bottom: 0%;
+            left: 80%;
+            transform: translate(-50%, -50%) skew(50deg);
+          }
+        }
+        .pincelheadbody {
+          position: absolute;
+          height: 50px;
+          width: 100px;
+          background: linear-gradient(
+            0,
+            rgb(212, 139, 43),
+            rgb(134, 82, 14),
+            rgb(104, 69, 25)
+          );
+        }
+      }
+      .pinceltop {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(-50deg);
+        height: 50px;
+        width: 30vw;
+        background-color: rgb(48, 48, 128);
+      }
+
+      .pincelbelow {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(50deg);
+        height: 50px;
+        width: 30vw;
+        background-color: rgb(33, 33, 209);
+      }
+      .pincelbody {
+        position: absolute;
+        height: 50px;
+        width: 30vw;
+        background: linear-gradient(
+          0,
+          rgb(33, 33, 209),
+          rgb(9, 9, 153),
+          rgb(48, 48, 128)
+        );
+        background-color: rgb(9, 9, 153);
+      }
+    }
+    // pincel -2
+    .pincel2 {
+      z-index: 1;
+      position: absolute;
+      bottom: 10%;
+      left: 0%;
+      transform: translate(10%, -50%) rotate(-25deg);
+      height: 25px;
+      width: 10vw;
+      .pincelbottom {
+        position: absolute;
+        height: 50px;
+        width: 30px;
+        top: 50%;
+        left: 0%;
+        border-color: black;
+        transform: translate(-50%, -50%);
+        background-color: rgb(205, 213, 224);
+        .pincelclean {
+          position: absolute;
+          height: 50px;
+          width: 30px;
+          top: 50%;
+          left: 0%;
+          transform: translate(-50%, -50%);
+          background-color: rgb(255, 255, 255);
+        }
+      }
+      .pincelhead {
+        position: absolute;
+        height: 25px;
+        width: 50px;
+        top: 0%;
+        right: 0%;
+        transform: translateX(60%);
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: rgb(219, 124, 8);
+        .pincelheadtop {
+          position: absolute;
+          height: 25px;
+          width: 50px;
+          top: 0%;
+          right: 0%;
+          border-color: black;
+          transform: translate(0%, -50%) skew(50deg);
+          background-color: rgb(104, 69, 25);
+          overflow: hidden;
+          .pincelheader {
+            position: absolute;
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            bottom: 0%;
+            left: 100%;
+            transform: skew(-50deg);
+          }
+        }
+        .pincelheadbelow {
+          position: absolute;
+          height: 25px;
+          width: 50px;
+          top: 100%;
+          right: 0%;
+          transform: translate(0%, -50%) skew(-50deg);
+          background-color: rgb(212, 139, 43);
+          overflow: hidden;
+          .pincelheader {
+            position: absolute;
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            bottom: 0%;
+            left: 80%;
+            transform: translate(-50%, -50%) skew(50deg);
+          }
+        }
+        .pincelheadbody {
+          position: absolute;
+          height: 25px;
+          width: 50px;
+          background: linear-gradient(
+            0,
+            rgb(212, 139, 43),
+            rgb(134, 82, 14),
+            rgb(104, 69, 25)
+          );
+        }
+      }
+      .pinceltop {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(-50deg);
+        height: 25px;
+        width: 10vw;
+        background-color: rgb(48, 48, 128);
+      }
+
+      .pincelbelow {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(50deg);
+        height: 25px;
+        width: 10vw;
+        background-color: rgb(33, 33, 209);
+      }
+      .pincelbody {
+        position: absolute;
+        height: 25px;
+        width: 10vw;
+        background: linear-gradient(
+          0,
+          rgb(33, 33, 209),
+          rgb(9, 9, 153),
+          rgb(48, 48, 128)
+        );
+        background-color: rgb(9, 9, 153);
+      }
+    }
+    // pincel -3
+    .pincel3 {
+      z-index: 2;
+      position: absolute;
+      bottom: 10%;
+      left: 20%;
+      transform: translate(10%, -50%) rotate(30deg);
+      height: 25px;
+      width: 10vw;
+      .pincelbottom {
+        position: absolute;
+        height: 50px;
+        width: 30px;
+        top: 50%;
+        left: 0%;
+        border-color: black;
+        transform: translate(-50%, -50%);
+        background-color: rgb(205, 213, 224);
+        .pincelclean {
+          position: absolute;
+          height: 50px;
+          width: 30px;
+          top: 50%;
+          left: 0%;
+          transform: translate(-50%, -50%);
+          background-color: rgb(255, 255, 255);
+        }
+      }
+      .pincelhead {
+        position: absolute;
+        height: 25px;
+        width: 50px;
+        top: 0%;
+        right: 0%;
+        transform: translateX(60%);
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: rgb(219, 124, 8);
+        .pincelheadtop {
+          position: absolute;
+          height: 25px;
+          width: 50px;
+          top: 0%;
+          right: 0%;
+          border-color: black;
+          transform: translate(0%, -50%) skew(50deg);
+          background-color: rgb(104, 69, 25);
+          overflow: hidden;
+          .pincelheader {
+            position: absolute;
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            bottom: 0%;
+            left: 100%;
+            transform: skew(-50deg);
+          }
+        }
+        .pincelheadbelow {
+          position: absolute;
+          height: 25px;
+          width: 50px;
+          top: 100%;
+          right: 0%;
+          transform: translate(0%, -50%) skew(-50deg);
+          background-color: rgb(212, 139, 43);
+          overflow: hidden;
+          .pincelheader {
+            position: absolute;
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            bottom: 0%;
+            left: 80%;
+            transform: translate(-50%, -50%) skew(50deg);
+          }
+        }
+        .pincelheadbody {
+          position: absolute;
+          height: 25px;
+          width: 50px;
+          background: linear-gradient(
+            0,
+            rgb(212, 139, 43),
+            rgb(134, 82, 14),
+            rgb(104, 69, 25)
+          );
+        }
+      }
+      .pinceltop {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(-50deg);
+        height: 25px;
+        width: 10vw;
+        background-color: rgb(48, 48, 128);
+      }
+
+      .pincelbelow {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%) skew(50deg);
+        height: 25px;
+        width: 10vw;
+        background-color: rgb(33, 33, 209);
+      }
+      .pincelbody {
+        position: absolute;
+        height: 25px;
+        width: 10vw;
+        background: linear-gradient(
+          0,
+          rgb(33, 33, 209),
+          rgb(9, 9, 153),
+          rgb(48, 48, 128)
+        );
+        background-color: rgb(9, 9, 153);
+      }
+    }
+    // card
+    mat-card {
+      height: 50vh;
+      width: 50vw;
+      z-index: 2;
+    }
+    mat-card-content {
+      width: 100%;
+      mat-form-field {
+        width: 100%;
+      }
+    }
+    mat-card-actions {
+      width: 100%;
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

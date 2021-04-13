@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>預覽結果</h1>
+<mat-card class="quill-view">
+<quill-view [content]='data.content' format='html' theme='bubble'></quill-view>
+</mat-card>
+
+<mat-dialog-actions align="center">
+  <button color="primary" mat-flat-button (click)="onNoClick()">繼續編輯</button>
+  <button color="warn" mat-flat-button cdkFocusInitial (click)='sendPost()'>確定送出</button>
+</mat-dialog-actions>
+
+<div class="success" *ngIf="success">
+  <mat-spinner></mat-spinner>
+  <h5>Updating...</h5>
+</div>
+

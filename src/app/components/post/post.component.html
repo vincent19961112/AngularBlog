@@ -1,0 +1,74 @@
+<mat-toolbar color="accent">
+    <span>
+  <h1>撰寫文章</h1>
+  </span>
+</mat-toolbar>
+<div class="postCard">
+  <mat-accordion>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  文章標題
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+              <mat-label>文章標題</mat-label>
+              <input matInput [(ngModel)]="title">
+          </mat-form-field>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  文章描述
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+              <mat-label>文章描述</mat-label>
+              <textarea  matInput [(ngModel)]="description"></textarea>
+          </mat-form-field>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  關鍵標籤
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-form-field>
+              <mat-label>Favorite Tags</mat-label>
+              <mat-chip-list #chipList aria-label="Tag selection">
+                  <mat-chip *ngFor="let Tag of Tags" [selectable]="selectable" [removable]="removable" (removed)="remove(Tag)">
+                      {{Tag.name}}
+                      <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                  </mat-chip>
+                  <input placeholder="新標籤..." [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" >
+              </mat-chip-list>
+          </mat-form-field>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+              <mat-panel-title>
+                  撰寫文章
+              </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div fxFlex fxLayout='column' fxLayoutAlign="center center">
+              <mat-card class="quill-edit">
+                  <form [formGroup]='EditForm' (ngSubmit)="Onsubmit()">
+                      <quill-editor
+                      [styles]='stylesQuill'
+                      formControlName="editor"
+                      (onFocus)="focus($event)"
+                        ></quill-editor>
+                  </form>
+                  <mat-card-actions fxLayoutAlign="center">
+                      <button (click)="openDialog()" mat-raised-button color="primary">預覽</button>
+                  </mat-card-actions>
+              </mat-card>
+          </div>
+      </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+
+
+

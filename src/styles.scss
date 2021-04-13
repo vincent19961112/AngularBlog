@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.bubble.css";
+@import "~quill/dist/quill.snow.css";
+@import "./app/themes/custom-theme.scss";
+
+html,
+body {
+  height: 100%;
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+  --primary: #3f51b5;
+  --warn: #f44336;
+  --accent: #ff4081;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  margin: 0;
+  padding: 0;
+  font-family: "arial", heletica, sans-serif;
+  font-size: 12px;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}

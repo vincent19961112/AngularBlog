@@ -1,0 +1,55 @@
+<section class="section"
+  fxFlex fxLayout="row"
+  fxLayout.xs="column"
+  fxLayout.sm="column"
+  fxLayoutGap
+  fxLayoutGap="50px"
+  fxLayoutAlign="start start"
+  fxLayoutAlign.sm="center center"
+  fxLayoutAlign.xs="center center"
+     >
+  <nav fxFlex="20%">
+    <mat-card fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-title fxLayoutAlign="center center">我的文章</mat-card-title>
+      <mat-card-subtitle>{{auth.displayName}}</mat-card-subtitle>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+      <div class='img' src='' alt="照片"></div>
+      {{auth.email}}
+
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="center start">
+        <button color="accent" mat-raised-button>修改個人資料</button>
+      </mat-card-actions>
+      <mat-card-actions fxLayoutAlign="center center">
+        <button color="warn" mat-raised-button>fackbook粉絲頁</button>
+      </mat-card-actions>
+    </mat-card>
+  </nav>
+
+  <main fxFlex="80%" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card style="height: 30vh;display: flex;flex-direction: column; justify-content: center;align-items: bottom;">
+      <mat-card-title style="text-align: center;">去加一些自己的文章吧</mat-card-title>
+      <mat-card-actions>
+          <button mat-raised-button color="accent" [routerLink]="['/post']">撰寫文章</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card *ngFor="let post of Posts$|async">
+        <mat-card-title>{{post.title}}</mat-card-title>
+        <mat-card-subtitle>撰寫時間:{{post.createdAt}}</mat-card-subtitle>
+        <mat-card-subtitle>作者:{{post.name}}</mat-card-subtitle>
+        <mat-card-subtitle><mat-chip color="primary" selected>{{post.tags}}</mat-chip></mat-card-subtitle>
+        <mat-card-content>{{post.description}}</mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" [routerLink]="['/article/',post.title]">閱讀文章</button>
+        </mat-card-actions>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" [routerLink]="['/post/',post.postId]">修改文章</button>
+        </mat-card-actions>
+        <mat-card-actions>
+            <button mat-raised-button color="warn" (click)="DeletePost(post.postId)">刪除文章</button>
+        </mat-card-actions>
+      </mat-card>
+    <mat-paginator fxLayoutAlign="center center"  [pageSize]='5' [hidePageSize]='true' showFirstLastButtons=true>
+    </mat-paginator>
+  </main>
+</section>

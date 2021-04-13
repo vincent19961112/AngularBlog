@@ -1,0 +1,25 @@
+<section>
+  <mat-card class="main cards--three" *ngFor="let post of Posts$|async">
+      <mat-card-title>{{post.title}}</mat-card-title>
+      <mat-card-subtitle>撰寫時間:{{post.createdAt}}</mat-card-subtitle>
+      <mat-card-subtitle>更新時間:{{post.updatedAt}}</mat-card-subtitle>
+      <mat-card-subtitle><mat-chip color="primary" selected>{{post.tags}}</mat-chip></mat-card-subtitle>
+      <mat-card-content>{{post.description}}</mat-card-content>
+      <mat-card-actions>
+          <button mat-raised-button color="warn" [routerLink]="['/article/',post.title]">閱讀文章</button>
+      </mat-card-actions>
+       <span class="cards--three__rect-1">
+      <span class="shadow-1"></span>
+      <p>作者:{{post.name}}</p>
+    </span>
+    <span class="cards--three__rect-2">
+      <span class="shadow-2"></span>
+    </span>
+    <span class="cards--three__circle"></span>
+
+  </mat-card>
+  <mat-paginator fxLayoutAlign="center center" [pageSize]='5' [hidePageSize]='true' showFirstLastButtons=true>
+  </mat-paginator>
+</section>
+
+

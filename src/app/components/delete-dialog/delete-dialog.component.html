@@ -1,0 +1,16 @@
+
+<section fxLayout="column" fxLayoutAlign="center center">
+  <h1 mat-dialog-title>刪除文章</h1>
+  <mat-dialog-content>
+    您確定要刪除?
+  </mat-dialog-content>
+  <mat-dialog-actions>
+  <button color="primary" mat-flat-button (click)="onNoClick()">取消</button>
+  <button color="warn" mat-flat-button (click)='sendDelete(this.data.postId)'>確定</button>
+  </mat-dialog-actions>
+  <div class="success" *ngIf="success">
+    <mat-spinner></mat-spinner>
+    <h5>delete...</h5>
+  </div>
+</section>
+
