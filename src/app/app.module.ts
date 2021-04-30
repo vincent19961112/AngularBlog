@@ -35,6 +35,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 //directive 匯入
 import { MustMatchDirective } from './_helpers/Must-match.directive';
+import { ChartComponent } from './components/home/chart/chart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { MustMatchDirective } from './_helpers/Must-match.directive';
     EditPostComponent,
     DeleteDialogComponent,
     MustMatchDirective,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,

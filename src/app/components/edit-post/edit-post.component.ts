@@ -69,7 +69,6 @@ export class EditPostComponent implements OnInit,OnDestroy {
     })
 
     this.postId = this.router.snapshot.paramMap.get('id');
-    console.log(this.postId)
     this.postApiSubscription = this.postApi.getPrivatePost(this.postId).subscribe((data:any)=>{
       this.title = data.title
       data.tags.forEach(tag=>{

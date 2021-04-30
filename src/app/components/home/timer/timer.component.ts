@@ -64,7 +64,7 @@ export class TimerComponent implements OnInit {
         if(this.TH>=24){
           this.TH = 0;
         }
-    },996);
+    },1000);
   }
 
 }

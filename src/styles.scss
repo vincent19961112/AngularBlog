@@ -22,7 +22,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "arial", heletica, sans-serif;
-  font-size: 12px;
 }
 
 body::-webkit-scrollbar {
@@ -37,4 +36,43 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--thumbBG);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
+}
+
+@media (min-width: 0px) and (max-width: 374px) {
+  html {
+    font-size: 26.6666666vw;
+  }
+}
+
+@media (min-width: 375px) {
+  html {
+    font-size: 26.6666666vw;
+  }
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 17.3611111vw;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  html {
+    font-size: 13.0208333vw;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  html {
+    font-size: 10.0908173vw;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  html {
+    font-size: 8.333333vw;
+  }
 }

@@ -4,30 +4,30 @@
   left: 0;
   z-index: 5;
   .logo {
-    height: 150px;
+    h1 {
+      font-size: 0.15rem;
+    }
+    height: 1.5rem;
     span {
       margin: auto;
     }
   }
 
   button {
-    font-size: 25px;
-  }
-  @media screen and (max-width: 960px) {
-    button {
-      font-size: 9px;
-    }
+    padding: 0.05rem;
+    font-size: 0.15rem !important;
   }
 
   .btn {
+    font-size: 0.2rem !important;
     position: relative;
     &::before {
       content: "";
       position: absolute;
-      height: 2px;
+      height: 0.02rem;
       width: 0px;
       left: 0;
-      bottom: 10px;
+      bottom: 0.05rem;
       background: #fff;
       transition: all 0.5s ease;
     }
@@ -35,5 +35,31 @@
     &:hover:before {
       width: 100%;
     }
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 375px) {
+  button {
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  button {
+    font-size: 10px !important;
+  }
+}
+@media screen and (min-width: 596px) {
+  button {
+    font-size: 12px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  button {
+    font-size: 14px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  button {
+    font-size: 0.09rem !important;
   }
 }

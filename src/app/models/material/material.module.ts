@@ -14,26 +14,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTabsModule} from '@angular/material/tabs';
+//chert
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatDialogModule,
-    MatNativeDateModule,
-    MatExpansionModule,
-    MatChipsModule,
-    MatIconModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatListModule,
-    MatProgressSpinnerModule
-  ],
     exports: [
     CommonModule,
     MatToolbarModule,
@@ -49,7 +33,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatPaginatorModule,
     MatTableModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }

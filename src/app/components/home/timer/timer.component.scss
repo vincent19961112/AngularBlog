@@ -1,4 +1,4 @@
-$font-Size: 20px;
+$font-Size: 0.12rem;
 
 @mixin bg-sh {
   font-size: $font-Size;
@@ -23,9 +23,9 @@ $font-Size: 20px;
     font-size: $font-Size;
     li {
       list-style-type: none;
-      margin-top: 1.5rem;
+      margin-top: 0.15rem;
       button {
-        margin-right: 10px;
+        margin-right: 0.1rem;
         cursor: default;
       }
     }
@@ -64,29 +64,29 @@ $font-Size: 20px;
 }
 
 @media screen and (max-width: 960px) {
-  $font-Size: 10px;
+  $font-Size: 0.1rem;
   .Clock {
-    height: 100px;
-    width: 100px;
-    font-size: 10px;
-    height: 150px;
-    width: 150px;
+    height: 1rem;
+    width: 1rem;
+    font-size: 0.1rem;
+    height: 1.5rem;
+    width: 1.5rem;
     .TagColor {
-      font-size: 10px;
+      font-size: 0.1rem;
     }
     .Spinner-TS {
       .TS {
-        font-size: 10px;
+        font-size: 0.1rem;
       }
     }
     .Spinner-TM {
       .TM {
-        font-size: 10px;
+        font-size: 0.1rem;
       }
     }
     .Spinner-TH {
       .TH {
-        font-size: 10px;
+        font-size: 0.1rem;
       }
     }
   }

@@ -4,12 +4,6 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "dist/quill-example",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
     "rewrites": [
       {
         "source": "**",
