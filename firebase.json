@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    "public": "dist/quill-example",
     "rewrites": [
       {
         "source": "**",

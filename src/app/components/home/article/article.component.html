@@ -1,17 +1,15 @@
 <section>
   <mat-card *ngFor="let post of post$">
       <mat-card-title>{{post.title}}</mat-card-title>
-      <button color='primary' mat-icon-button><mat-icon>thumb_up</mat-icon></button>12
-      <button color='warn' mat-icon-button><mat-icon>thumb_down</mat-icon></button>15
-      <mat-card-content>
+        <mat-card-content>
         <quill-view [content]='post.content' format='html' theme='bubble'></quill-view>
       </mat-card-content>
       <mat-card-actions>{{post.name}}
   {{titleheader|json}}</mat-card-actions>
       <mat-card-actions fxLayoutAlign="space-between center">
-        <button mat-raised-button color="warn" [routerLink]="['/']">上一篇</button>
+        <button *ngIf="beforepost" mat-raised-button color="warn" (click)="changeArticle(beforepost)" [routerLink]="['/article/', beforepost]">({{beforepost}})上一頁 <mat-icon>chevron_left</mat-icon></button>
         <button mat-raised-button color="warn" [routerLink]="['/']">首頁</button>
-        <button mat-raised-button color="warn" [routerLink]="['/']">下一篇</button>
+        <button  *ngIf="nextpost" mat-raised-button color="warn" (click)="changeArticle(nextpost)" [routerLink]="['/article/', nextpost]"><mat-icon>navigate_next</mat-icon> 下一頁({{nextpost}})</button>
       </mat-card-actions>
   </mat-card>
 </section>

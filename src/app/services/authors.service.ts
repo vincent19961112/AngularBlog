@@ -27,7 +27,7 @@ export class AuthorsService {
       this.AfAuth.onAuthStateChanged((credential:any)=>{
         if(credential){
           this.authStatusSub.next(credential);
-          console.log('User is logged in');
+          // console.log('User is logged in');
         }
         else{
           this.authStatusSub.next(null);

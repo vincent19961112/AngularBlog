@@ -190,3 +190,8 @@ section {
     margin: 0;
   }
 }
+@media screen and (max-width: 959px) {
+  section {
+    margin: 0 !important;
+  }
+}

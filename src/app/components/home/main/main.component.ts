@@ -49,4 +49,5 @@ export class MainComponent implements OnInit,OnChanges,OnDestroy {
   onPaginateChange($event) {
   console.log($event);
   }
+
 }

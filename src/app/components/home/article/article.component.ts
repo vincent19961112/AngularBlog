@@ -12,6 +12,9 @@ export class ArticleComponent implements OnInit {
 
   titleheader;
   post$;
+  posts$;
+  nextpost = "";
+  beforepost = "";
   @ViewChild(MatCard) card: MatCardTitle;
 
   constructor(
@@ -21,16 +24,40 @@ export class ArticleComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-     this.viewportScroller.scrollToPosition([0,0]);
+    this.viewportScroller.scrollToPosition([0,0]);
     let title = this.route.snapshot.paramMap.get('id');
     this.PostApi.getPost(title).subscribe(post=>{
         this.post$ = post;
     });
+    this.PostApi.getPosts().subscribe((posts:any)=>{
+        let titlelist = [];
+        posts.forEach(element => {
+          titlelist.push(element.title)
+        });
+        this.nextpost = (titlelist.indexOf(title)+1) < (titlelist.lastIndexOf(0)) ? '' : titlelist[titlelist.indexOf(title)+1]
+        this.beforepost = (titlelist.indexOf(title)-1) < 0 ? '' : titlelist[titlelist.indexOf(title)-1]
+    })
+
     this.titleheader = this.card;
   }
 
   top(){
    this.viewportScroller.scrollToPosition([0,0]);
+  }
+
+  changeArticle(title){
+  this.PostApi.getPost(title).subscribe(post=>{
+        this.post$ = post;
+  });
+  this.PostApi.getPosts().subscribe((posts:any)=>{
+    let titlelist = [];
+    posts.forEach(element => {
+      titlelist.push(element.title)
+    });
+    this.nextpost = (titlelist.indexOf(title)+1) < (titlelist.lastIndexOf(0)) ? '' : titlelist[titlelist.indexOf(title)+1]
+    this.beforepost = (titlelist.indexOf(title)-1) < 0 ? '' : titlelist[titlelist.indexOf(title)-1]
+  })
+
   }
 
 }

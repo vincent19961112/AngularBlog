@@ -13,5 +13,10 @@ mat-card {
   }
 }
 .tags {
-  margin-top: 0.05rem;
+  margin-top: 0.3rem;
+}
+@media screen and (max-width: 959px) {
+  mat-card {
+    margin-top: 0.3rem;
+  }
 }

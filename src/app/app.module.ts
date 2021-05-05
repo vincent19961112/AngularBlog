@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // quill 模組
 import { QuillModule } from 'ngx-quill';
-
 // form 模組
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 //Material 模組
@@ -28,6 +27,7 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { RegistedComponent } from './components/registed/registed.component';
 import { EditPostComponent } from './components/edit-post/edit-post.component';
 import { DeleteDialogComponent } from './components/delete-dialog/delete-dialog.component';
+import { ChartComponent } from './components/home/chart/chart.component';
 //firebase 模組
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireModule } from '@angular/fire';
@@ -35,7 +35,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 //directive 匯入
 import { MustMatchDirective } from './_helpers/Must-match.directive';
-import { ChartComponent } from './components/home/chart/chart.component';
+//chart.js
+import { ChartsModule } from 'ng2-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +81,8 @@ import { ChartComponent } from './components/home/chart/chart.component';
     AngularFireStorageModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
